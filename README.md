@@ -20,23 +20,27 @@ needed and including comments to better describe what's happening.  It now reads
 commands from stdin (which can be a pipe file) in a simple loop.
 
 You can create a simple Linux pipe using the command:
+
   mkfifo pipe-name
+  
 where "pipe-name" is the name of your pipe file.  I used "input".
 
 You can then run the server with the command:
+
   NixieServer "clock" <input
 
 You can feed the server commands using:
+
   echo "clock" >input
 
 That's it!  Simple!  I like simple!  Here are the list commands:
 
-clock - Display HH:MM:SS and keep it updated every second (normal clock display)
-leds R G B - Set the LEDs under the digits to the RGB values given
-dots L R - Turn on (1) or off (0) the dots between the digits
-settime - Set the time in the clock's clock chip (not really needed now)
-roulette - Run all digits through displays of all values very quickly for a few seconds
-setsystime - Set the clock's clock chip to agree with Linux system time (not needed)
+clock - Display HH:MM:SS and keep it updated every second (normal clock display)  
+leds R G B - Set the LEDs under the digits to the RGB values given  
+dots L R - Turn on (1) or off (0) the dots between the digits  
+settime - Set the time in the clock's clock chip (not really needed now)  
+roulette - Run all digits through displays of all values very quickly for a few seconds  
+setsystime - Set the clock's clock chip to agree with Linux system time (not needed)  
 
 Any other command which is not one of the above is expected to be a sequence of
 either digits or spaces.  For example, my own script reads the inside and outside
@@ -45,9 +49,9 @@ on the right, separated by blank digits (spaces).
 
 You can blank the entire display (such as when you are going on vacation and don't need
 to place additional wear on the digits) by simply doing:
-  echo "      " >input
-  dots 0 0 >input
-  leds 0 0 0 >input
+  echo "      " >input  
+  dots 0 0 >input  
+  leds 0 0 0 >input  
 When you return, simply restart your script to drive the display.
 
 I'm open on implementation of other commands, please send me email!
