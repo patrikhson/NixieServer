@@ -49,9 +49,11 @@ on the right, separated by blank digits (spaces).
 
 You can blank the entire display (such as when you are going on vacation and don't need
 to place additional wear on the digits) by simply doing:
+
 % echo "      " >input  
 % dots 0 0 >input  
 % leds 0 0 0 >input  
+
 When you return, simply restart your script to drive the display.
 
 I'm open on implementation of other commands, please send me email!
