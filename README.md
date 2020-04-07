@@ -56,7 +56,7 @@ to place additional wear on the digits) by simply doing:
 
 When you return, simply restart your script to drive the display.
 
-I'm open on implementation of other commands, please send me email!
+I'm open to implementation of other commands, please send me email!
 
 (The "roulette" function is pretty widely documented on the net as a way to reset
 the cathodes inside the tubes and keep them working well.  Otherwise, the digits
